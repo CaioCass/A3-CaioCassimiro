@@ -1,0 +1,122 @@
+body{
+    background: linear-gradient(to right, 
+                #000000 20%,       
+                #161619 20% 80%,   
+                #000000 80%);      
+    text-align: center; 
+    color: rgb(226, 226, 226);
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.fundo-flex {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.faixa-esquerda, .faixa-direita {
+    width: 20%;
+    background-color: #000000;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 1000px;  
+    background-color: #161619;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 5px 0;
+}
+
+.visualizador{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border-radius: 5%;
+    background-color: rgba(255, 255, 255, 0.137);
+}
+
+.coluna-esquerda {
+    flex: 1;
+    max-width: 50%;
+}
+
+.imagem-principal{
+   max-width: 100%;
+overflow: hidden;
+}
+
+.imagem-principal img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover; 
+    border-radius: 5%;
+}
+
+.galeria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    margin-top: 15px;
+}
+
+.galeria img{
+    width: 60px;               
+    height: 60px;              
+    object-fit: cover;         
+    cursor: pointer;
+    border-radius: 8px;
+    transition: border 0.3s;
+}
+
+.galeria img:hover {
+    border: 2px solid #0073e6;
+}
+
+
+.coluna-direita {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+    max-width: 50%;
+}
+
+.perfil {
+    white-space: pre-line;
+    text-align: center; 
+}
+
+.info{
+    width: 600px;
+    height: 190px;
+    border-radius: 1.5%;
+}
+
+.btn-submit {
+    background-color: #007bff;  
+    color: white;               
+    border: none;               
+    padding: 8px 15px;          
+    border-radius: 6px;         
+    cursor: pointer;            
+    font-family: "Quicksand", sans-serif;
+}

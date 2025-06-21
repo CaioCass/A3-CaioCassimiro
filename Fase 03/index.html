@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>A3 - Caio Cassimiro</title>
+</head>
+<body> 
+  <div class="fundo-flex">
+        <div class="conteudo">
+            <h1>Caio Barcala Cassimiro</h1>
+            <p>
+                <div class="visualizador">
+                    <div class="coluna-esquerda">
+                        <div class="imagem-principal">
+                            <img id="banner-pricipal" src="profile/jojo8.png">
+                        </div>
+                        
+                        <div class="galeria">
+                            <img src="profile/jojo8.png" onclick="mudaImg('profile/jojo8.png')">
+                            <img src="profile/Josuke4a.jpg" onclick="mudaImg('profile/Josuke4a.jpg')">
+                            <img src="profile/art1.jpg" onclick="mudaImg('profile/art1.jpg')">
+                            <img src="profile/Stardust2.jpg" onclick="mudaImg('profile/Stardust2.jpg')">
+                        </div>
+                    </div>    
+
+                    <div class="coluna-direita">
+                        <h2>RA: 323210023</h2>
+                        <h3>Ciência da Computação - 4º Período</h3>
+                        <h4>Rua dos Carijós, Nº 32</h4>
+                        <p>Email: barcalacaio@gmail.com</p>
+
+                        <p>
+                            <label for="cpf">CPF: </label>
+                            <input type="text" id="cpf" placeholder="Ex: 123.456.789-00" maxlength="14" onblur="validaCPF()">
+                        </p>
+
+                        <p>
+                            <label for="email">E-mail: </label> 
+                            <input type="text" id="email" placeholder="Ex: persona@domain.com" onblur="validaEmail()">
+                        </p>    
+
+                        <table id="uc-table">
+                            <tr>
+                                <th>UCs Cursadas</th>
+                            </tr>
+                            <tr>
+                                <td>Ambientes computacionais e conectividade
+                                    <button onclick="moverCima(this)">⬆️</button>
+                                    <button onclick="moverBaixo(this)">⬇️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sistemas computacionais e segurança
+                                    <button onclick="moverCima(this)">⬆️</button>
+                                    <button onclick="moverBaixo(this)">⬇️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vida & Carreira
+                                    <button onclick="moverCima(this)">⬆️</button>
+                                    <button onclick="moverBaixo(this)">⬇️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Modelagem de software
+                                    <button onclick="moverCima(this)">⬆️</button>
+                                    <button onclick="moverBaixo(this)">⬇️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Programação de soluções computacionais
+                                    <button onclick="moverCima(this)">⬆️</button>
+                                    <button onclick="moverBaixo(this)">⬇️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Inovação, sustentabilidade e competitividade empresarial
+                                    <button onclick="moverCima(this)">⬆️</button>
+                                    <button onclick="moverBaixo(this)">⬇️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cultura e artes
+                                    <button onclick="moverCima(this)">⬆️</button>
+                                    <button onclick="moverBaixo(this)">⬇️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sistemas distribuídos e mobile
+                                    <button onclick="moverCima(this)">⬆️</button>
+                                    <button onclick="moverBaixo(this)">⬇️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Usabilidade, Dev. web, mobile e jogos
+                                    <button onclick="moverCima(this)">⬆️</button>
+                                    <button onclick="moverBaixo(this)">⬇️</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <button class="btn-submit" onclick="addUc()">Adicionar nova UC</button>
+                    </div>
+                </div>
+            </p>    
+            
+            <div>
+                <h2>Perfil Pessoal</h2>
+                <div class="perfil">Meu nome é Caio. Moro em Minas Gerais,
+                    curto quadrinhos, jogos eletrônicos e desenhos tradicionais e digitais
+                    gosto de aprender programação no intuíto de algum dia ser capaz de fazer um jogo por mim mesmo.
+                    Gosto de ver artistas desenhando e falando sobre seus projetos, como foi feito e planejado.
+                </div> 
+            
+            
+            <div>
+                <h2>Perfil Profissional</h2>
+                <div class="perfil" id="perfil-pessoal">
+                    Estou no momento trabalhando CLT, na proucura de emprego
+                    na área da Técnologia da Informação, tenho conhecimento básico
+                    em HTML/CSS, JavaScript, Java, PHP, C#, C & Python, no momento no
+                    4º período da faculdade de Ciência da Computação na UNA-Cristano Machado.
+                </div>
+            </div> 
+
+            <h4>Informação a se adicionar: </h4>
+            <textarea class="info" id="info" placeholder="Digite Aqui..."></textarea> <br>
+            <button class="btn-submit" onclick="addInfo()">Adicionar</button>
+       
+        <footer>
+            <p> Redes Sociais: 
+                <p>
+                    <a href="https://www.linkedin.com/in/caio-barcala-cassimiro-38b346231/?originalSubdomain=br"><img width="60px" src="https://www.gov.br/observatorio/en/academic-programs/graduate-program-in-geophysics/images/linkedin.png/@@images/6ec1e44d-f01a-4ce2-9cbf-314d6f085e45.png" alt="Linkedin"></a>
+                    <h5>Linkedin</h5>
+                </p>
+            </p>
+        </footer>
+     </div>  
+    </div>
+
+  <script src="script.js"></script>    
+</body>
+</html>
